@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lisa Anderson, MSN, Psychiatric Mental Health Nurse Practitioner | Psychiatric Telehealth MA &amp; RI</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sage: #7d9b8a;
+    --sage-light: #a8c0b0;
+    --sage-pale: #e8f0eb;
+    --cream: #f9f6f0;
+    --warm-white: #fdfcf8;
+    --charcoal: #2c2c2c;
+    --mid: #5a5a5a;
+    --light-text: #8a8a8a;
+    --gold: #b8965a;
+    --gold-light: #d4b07a;
+    --border: #e0dbd2;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--charcoal);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 3rem;
+    background: rgba(253, 252, 248, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-logo span {
+    color: var(--sage);
+    font-style: italic;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--mid);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--sage); }
+
+  .nav-cta {
+    background: var(--sage);
+    color: white !important;
+    padding: 0.55rem 1.4rem;
+    border-radius: 2px;
+    font-weight: 500 !important;
+  }
+
+  .nav-cta:hover { background: var(--sage-light); color: white !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 5rem;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    padding: 5rem 4rem 5rem 6rem;
+    position: relative;
+  }
+
+  .hero-left::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(125,155,138,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background: var(--sage);
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--sage);
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    margin-bottom: 1.8rem;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    color: var(--mid);
+    line-height: 1.8;
+    max-width: 42ch;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: #4a7a63;
+    color: white;
+    padding: 0.85rem 2rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    border-radius: 2px;
+    border: none;
+    transition: all 0.25s;
+    box-shadow: 0 4px 16px rgba(50,100,75,0.45);
+  }
+
+  .btn-primary:hover {
+    background: #3a6350;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 22px rgba(50,100,75,0.55);
+  }
+
+  .btn-outline {
+    display: inline-block;
+    border: none;
+    color: white;
+    padding: 0.85rem 2rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    border-radius: 2px;
+    transition: all 0.25s;
+    background: #4a7a63;
+    box-shadow: 0 4px 16px rgba(50,100,75,0.45);
+  }
+
+  .btn-outline:hover {
+    background: #3a6350;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 22px rgba(50,100,75,0.55);
+  }
+
+  .hero-right {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--sage-pale);
+    overflow: hidden;
+  }
+
+  .hero-right::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 30% 70%, rgba(125,155,138,0.2) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(184,150,90,0.1) 0%, transparent 50%);
+  }
+
+  .hero-photo-frame {
+    position: relative;
+    width: 360px;
+    height: 440px;
+    z-index: 2;
+    border-radius: 4px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  }
+
+  .hero-photo-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--sage-light) 0%, var(--sage) 100%);
+    border-radius: 3px;
+    transform: rotate(3deg);
+    opacity: 0.4;
+  }
+
+  .hero-photo-placeholder {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(160deg, #c5d8cc 0%, #8fb09a 100%);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-photo-placeholder::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 220px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50% 50% 0 0;
+  }
+
+  .photo-initials {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: white;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.1em;
+  }
+
+  .photo-note {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.75);
+    position: relative;
+    z-index: 1;
+    margin-top: 0.5rem;
+  }
+
+  .hero-badge {
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1.5rem;
+    background: white;
+    border-radius: 3px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    z-index: 3;
+    min-width: 160px;
+  }
+
+  .badge-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--sage);
+    line-height: 1;
+  }
+
+  .badge-label {
+    font-size: 0.72rem;
+    color: var(--light-text);
+    letter-spacing: 0.05em;
+    margin-top: 0.2rem;
+  }
+
+  /* MARQUEE */
+  .marquee-bar {
+    background: var(--charcoal);
+    color: var(--sage-light);
+    padding: 0.9rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .marquee-inner {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .marquee-inner span { margin: 0 3rem; color: var(--gold); }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* SECTIONS */
+  section { padding: 6rem 6rem; }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1px;
+    background: var(--sage);
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ABOUT */
+  .about {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    color: var(--mid);
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+  }
+
+  .credentials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .credential-card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 1.2rem;
+    border-radius: 3px;
+    border-top: 2px solid var(--sage);
+  }
+
+  .cred-title {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--light-text);
+    margin-bottom: 0.3rem;
+  }
+
+  .cred-body {
+    font-size: 0.85rem;
+    color: var(--charcoal);
+    font-weight: 400;
+  }
+
+  /* SERVICES */
+  .services {
+    background: var(--warm-white);
+  }
+
+  .services-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    align-items: end;
+  }
+
+  .services-intro {
+    font-size: 0.95rem;
+    color: var(--mid);
+    line-height: 1.8;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 2rem;
+    border-radius: 3px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--sage);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left;
+  }
+
+  .service-card:hover {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+    transform: translateY(-2px);
+  }
+
+  .service-card:hover::after { transform: scaleX(1); }
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1.2rem;
+    color: var(--sage);
+  }
+
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 0.6rem;
+  }
+
+  .service-desc {
+    font-size: 0.85rem;
+    color: var(--mid);
+    line-height: 1.7;
+  }
+
+  /* TELEHEALTH PROCESS */
+  .process {
+    background: var(--charcoal);
+    color: white;
+  }
+
+  .process .section-label { color: var(--sage-light); }
+  .process .section-label::before { background: var(--sage-light); }
+  .process .section-title { color: white; }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+  }
+
+  .steps::before {
+    content: '';
+    position: absolute;
+    top: 1.8rem;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .step {
+    text-align: center;
+    position: relative;
+  }
+
+  .step-num {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: rgba(125,155,138,0.2);
+    border: 1px solid rgba(125,155,138,0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--sage-light);
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 0.6rem;
+  }
+
+  .step-desc {
+    font-size: 0.83rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+  }
+
+  /* CONDITIONS */
+  .conditions {
+    background: var(--sage-pale);
+  }
+
+  .conditions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .condition-tag {
+    background: white;
+    border: 1px solid var(--sage-light);
+    color: var(--charcoal);
+    padding: 0.5rem 1.2rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: all 0.2s;
+  }
+
+  .condition-tag:hover {
+    background: var(--sage);
+    border-color: var(--sage);
+    color: white;
+  }
+
+  /* PROFILES */
+  .profiles {
+    background: var(--warm-white);
+  }
+
+  .profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .profile-card {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background: white;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .profile-card:hover {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+    border-color: var(--sage-light);
+  }
+
+  .profile-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--sage-pale);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .profile-icon svg { color: var(--sage); }
+
+  .profile-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 0.3rem;
+  }
+
+  .profile-source {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 0.5rem;
+  }
+
+  .profile-desc {
+    font-size: 0.83rem;
+    color: var(--mid);
+    line-height: 1.6;
+  }
+
+  .profile-arrow {
+    margin-left: auto;
+    color: var(--light-text);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    transition: transform 0.2s;
+  }
+
+  .profile-card:hover .profile-arrow {
+    transform: translateX(3px);
+    color: var(--sage);
+  }
+
+  /* CONTACT */
+  .contact {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .contact-info p {
+    font-size: 0.95rem;
+    color: var(--mid);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--charcoal);
+  }
+
+  .contact-item svg {
+    color: var(--sage);
+    flex-shrink: 0;
+  }
+
+  .contact-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 2.5rem;
+  }
+
+  .contact-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-card-sub {
+    font-size: 0.85rem;
+    color: var(--mid);
+    margin-bottom: 2rem;
+  }
+
+  .quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .quick-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--charcoal);
+    font-size: 0.88rem;
+    font-weight: 400;
+    transition: all 0.2s;
+  }
+
+  .quick-link:hover {
+    border-color: var(--sage);
+    background: var(--sage-pale);
+    color: var(--sage);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--charcoal);
+    color: rgba(255,255,255,0.55);
+    padding: 3rem 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .footer-brand span { color: var(--sage-light); font-style: italic; }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.45);
+    font-size: 0.8rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--sage-light); }
+
+  .footer-copy {
+    font-size: 0.78rem;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+
+  /* INSURANCE */
+  .insurance-sec {
+    background: var(--cream);
+    padding: 6rem 6rem;
+  }
+  .insurance-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .ins-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 1.2rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    transition: all 0.2s;
+    border-left: 3px solid var(--sage);
+  }
+  .ins-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    transform: translateY(-1px);
+  }
+  .ins-logo {
+    width: 38px;
+    height: 38px;
+    background: var(--sage-pale);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--sage);
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+  }
+  .ins-card span {
+    font-size: 0.85rem;
+    color: var(--charcoal);
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  .ins-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    font-size: 0.83rem;
+    color: var(--mid);
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 1rem 1.2rem;
+    max-width: 700px;
+  }
+  .ins-note svg { color: var(--sage); flex-shrink: 0; margin-top: 2px; }
+
+  @media (max-width: 900px) {
+    .insurance-sec { padding: 4rem 2rem; }
+    .insurance-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* REVIEWS */
+  .reviews-section {
+    background: var(--charcoal);
+    padding: 6rem 6rem;
+    color: white;
+  }
+  .reviews-section .sec-label { color: var(--sage-light); }
+  .reviews-section .sec-label::before { background: var(--sage-light); }
+  .reviews-section h2 { color: white; margin-bottom: 3rem; }
+
+  .reviews-summary {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 3rem;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .rating-big { text-align: center; }
+  .rating-score {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: white;
+    line-height: 1;
+  }
+  .rating-stars { color: var(--gold); font-size: 1.3rem; margin: 0.3rem 0; letter-spacing: 2px; }
+  .rating-count { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
+  .rating-source { font-size: 0.75rem; margin-top: 0.4rem; }
+  .rating-source a { color: var(--sage-light); text-decoration: none; }
+  .rating-source a:hover { text-decoration: underline; }
+
+  .rating-bars { display: flex; flex-direction: column; gap: 0.6rem; }
+  .bar-row { display: flex; align-items: center; gap: 0.75rem; }
+  .bar-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); min-width: 45px; }
+  .bar-track { flex: 1; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--gold); border-radius: 3px; transition: width 1s ease; }
+  .bar-pct { font-size: 0.75rem; color: rgba(255,255,255,0.4); min-width: 30px; text-align: right; }
+
+  .highlights-list { display: flex; flex-direction: column; gap: 0.5rem; }
+  .highlight-chip {
+    font-size: 0.8rem;
+    color: var(--sage-light);
+    padding: 0.4rem 0.9rem;
+    border: 1px solid rgba(168,192,176,0.3);
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .review-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    padding: 1.8rem;
+    transition: all 0.3s;
+  }
+  .review-card:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(168,192,176,0.3);
+  }
+  .review-card.featured { border-color: rgba(184,150,90,0.4); }
+  .review-stars { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 1px; }
+  .review-text {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 1.2rem;
+  }
+  .review-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 0.9rem;
+    font-size: 0.75rem;
+  }
+  .review-author { color: rgba(255,255,255,0.6); font-weight: 500; }
+  .review-date { color: rgba(255,255,255,0.35); }
+  .review-source { color: var(--sage-light); text-decoration: none; margin-left: auto; }
+  .review-source:hover { text-decoration: underline; }
+
+  .review-cta {
+    background: rgba(125,155,138,0.12);
+    border: 1px solid rgba(125,155,138,0.3);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  .review-cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  .review-cta-sub { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+  @media (max-width: 900px) {
+    .reviews-section { padding: 4rem 2rem; }
+    .reviews-summary { grid-template-columns: 1fr; gap: 1.5rem; }
+    .reviews-grid { grid-template-columns: 1fr; }
+  }
+
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards;
+  }
+
+  .fade-up:nth-child(1) { animation-delay: 0.1s; }
+  .fade-up:nth-child(2) { animation-delay: 0.25s; }
+  .fade-up:nth-child(3) { animation-delay: 0.4s; }
+  .fade-up:nth-child(4) { animation-delay: 0.55s; }
+
+  /* MOBILE */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { padding: 7rem 2rem 3rem; }
+    .hero-right { height: 400px; }
+    section { padding: 4rem 2rem; }
+    .about, .contact { grid-template-columns: 1fr; gap: 3rem; }
+    .services-header { grid-template-columns: 1fr; gap: 1rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .steps::before { display: none; }
+    .profiles-grid { grid-template-columns: 1fr; }
+    footer { padding: 2rem; flex-direction: column; align-items: flex-start; }
+  }
+
+  
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Lisa Anderson <span>PMHNP-BC</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#conditions">Conditions</a></li>
+    <li><a href="#insurance">Insurance</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#profiles">Find Me Online</a></li>
+    <li><a href="#contact" class="nav-cta">Book Appointment</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-eyebrow fade-up">Psychiatric Telehealth · MA &amp; RI</div>
+    <h1 class="hero-title fade-up">
+      Compassionate<br>
+      <em>Mental Health</em><br>
+      Care
+    </h1>
+    <div class="hero-subtitle fade-up">Lisa Anderson, MSN<br><span style="font-size:0.85em;color:var(--mid);font-weight:400;letter-spacing:0.02em;">Psychiatric Mental Health Nurse Practitioner — Board Certified</span></div>
+    <p class="hero-desc fade-up">
+      Board-certified Psychiatric Mental Health Nurse Practitioner offering expert medication evaluation and management through secure telehealth — serving adolescents and adults across Massachusetts and Rhode Island. <strong style="color:var(--charcoal)">Text or email to book your initial appointment.</strong> Follow-up appointments are booked through Tebra.
+    </p>
+    <div class="hero-actions fade-up">
+      <a href="sms:7742606861&body=Hi%20Lisa%2C%20my%20name%20is%20%5Byour%20name%5D.%20My%20insurance%20is%20%5Binsurance%20carrier%5D.%20I%27m%20looking%20for%20help%20with%20%5Breason%20%E2%80%94%20e.g.%2C%20anxiety%2C%20ADHD%2C%20medication%20management%5D." class="btn-primary">💬 Text to Book</a>
+      <a href="/cdn-cgi/l/email-protection#490528272d2c3b7b7a78707e79092e24282025672a2624763a3c2b232c2a3d740027203d2028256c7b790839392620273d242c273d6c7b791b2c383c2c3a3d6f2b262d307401206c7b7905203a286c7b0a6c79086c7908006c7b7e2d6c7b792520222c6c7b793d266c7b792b2626226c7b7928276c7b792027203d2028256c7b792839392620273d242c273d676c79086c79080728242c6c7a086c7b796c7908083f282025282b2025203d306c7a086c7b796c79081e21283d6c7b79006c7b7e246c7b793a2c2c2220272e6c7b79212c25396c7b793e203d216c7a086c7b79" class="btn-outline">✉️ Email to Book</a>
+    </div>
+    <p style="font-size:0.78rem;color:var(--light-text);margin-top:0.9rem;">For initial appointments only &nbsp;·&nbsp; Follow-ups booked via <a href="https://www.tebra.com/care/provider/lisa-anderson-pmhnp-1558822296" target="_blank" style="color:var(--sage);text-decoration:none;font-weight:500;">Tebra</a></p>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo-frame">
+      <div class="hero-photo-bg"></div>
+      <img src="lisa.jpg" alt="Lisa Anderson, PMHNP-BC" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:3px;position:relative;z-index:1;" />
+      </div>
+      <div class="hero-badge">
+        <div class="badge-number">35+</div>
+        <div class="badge-label">Years of Nursing<br>Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar">
+  <div class="marquee-inner">
+    Telehealth Psychiatry&nbsp; <span>·</span> &nbsp;Medication Management&nbsp; <span>·</span> &nbsp;ADHD&nbsp; <span>·</span> &nbsp;Depression&nbsp; <span>·</span> &nbsp;Anxiety&nbsp; <span>·</span> &nbsp;PTSD&nbsp; <span>·</span> &nbsp;Mood Disorders&nbsp; <span>·</span> &nbsp;OCD&nbsp; <span>·</span> &nbsp;Eating Disorders&nbsp; <span>·</span> &nbsp;Adolescents & Adults&nbsp; <span>·</span> &nbsp;MA &amp; RI Licensed&nbsp; <span>·</span> &nbsp;Telehealth Psychiatry&nbsp; <span>·</span> &nbsp;Medication Management&nbsp; <span>·</span> &nbsp;ADHD&nbsp; <span>·</span> &nbsp;Depression&nbsp; <span>·</span> &nbsp;Anxiety&nbsp; <span>·</span> &nbsp;PTSD&nbsp; <span>·</span> &nbsp;Mood Disorders&nbsp; <span>·</span> &nbsp;OCD&nbsp; <span>·</span> &nbsp;Eating Disorders&nbsp; <span>·</span> &nbsp;Adolescents &amp; Adults&nbsp; <span>·</span> &nbsp;MA &amp; RI Licensed&nbsp; <span>·</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-text">
+    <div class="section-label">About</div>
+    <h2 class="section-title">Experienced, Compassionate Psychiatric Care</h2>
+    <p>Lisa Anderson earned her Bachelor's degree in Nursing from Indiana University of Pennsylvania, followed by a Master's in Nursing Administration from LaRoche College in Pittsburgh, PA. She then completed an additional Master's program earning her license as a Psychiatric Mental Health Nurse Practitioner (PMHNP) at Regis College in Weston, MA.</p>
+    <p>With over 35 years of extensive nursing experience — including a decade in public health school nursing — Lisa brings a uniquely broad perspective to psychiatric care. Her background spans inpatient psychiatric hospitals, adolescent and adult inpatient facilities, and community healthcare settings.</p>
+    <p>Her practice prioritizes alleviating symptoms, strengthening coping mechanisms, and guiding individuals toward stability and fulfillment.</p>
+    <div class="credentials-grid">
+      <div class="credential-card">
+        <div class="cred-title">Education</div>
+        <div class="cred-body">BSN, Indiana University of PA<br>MSN, LaRoche College<br>PMHNP, Regis College</div>
+      </div>
+      <div class="credential-card">
+        <div class="cred-title">Certification</div>
+        <div class="cred-body">Board-Certified PMHNP<br>MA &amp; RI Licensed<br>Telehealth Provider</div>
+      </div>
+      <div class="credential-card">
+        <div class="cred-title">Experience</div>
+        <div class="cred-body">35+ years nursing<br>10 years school nursing<br>Inpatient & community</div>
+      </div>
+      <div class="credential-card">
+        <div class="cred-title">Populations</div>
+        <div class="cred-body">Adolescents<br>Adults</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="section-label">Contact</div>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.5rem;">Get In Touch</h3>
+    <div class="contact-details">
+      <div class="contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+        <a href="tel:774-260-6861" style="color:var(--charcoal);text-decoration:none;">774-260-6861</a>
+      </div>
+      <div class="contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>25 Market St. Ste. 14, Swansea, MA 02777</span>
+      </div>
+      <div class="contact-item" style="margin-top:0.5rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <span>Telehealth · Massachusetts &amp; Rhode Island</span>
+      </div>
+      <div class="contact-item" style="margin-top:0.5rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="/cdn-cgi/l/email-protection#105c717e74756222232129272050777d71797c3e737f7d2f6365727a7573642d597e796479717c3522205160607f797e647d757e643522204275616575636436727f74692d58793522205c79637135225335205135205159352227743522207c797b75352220647f352220727f7f7b352220717e352220797e796479717c3522207160607f797e647d757e643e3520513520515e717d75352351352220352051516671797c7172797c79646935235135222035205147787164352220593522277d3522206375757b797e7735222078757c6035222067796478352351352220" style="color:var(--charcoal);text-decoration:none;">Lander231970&#64;gmail.com</a>
+      </div>
+    </div>
+    <div style="margin-top:2rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
+      <a href="sms:7742606861&body=Hi%20Lisa%2C%20my%20name%20is%20%5Byour%20name%5D.%20My%20insurance%20is%20%5Binsurance%20carrier%5D.%20I%27m%20looking%20for%20help%20with%20%5Breason%20%E2%80%94%20e.g.%2C%20anxiety%2C%20ADHD%2C%20medication%20management%5D." class="btn-primary">💬 Text to Book</a>
+      <a href="/cdn-cgi/l/email-protection#87cbe6e9e3e2f5b5b4b6beb0b7c7e0eae6eeeba9e4e8eab8f4f2e5ede2e4f3bacee9eef3eee6eba2b5b7c6f7f7e8eee9f3eae2e9f3a2b5b7d5e2f6f2e2f4f3a1e5e8e3febacfeea2b5b7cbeef4e6a2b5c4a2b7c6a2b7c6cea2b5b0e3a2b5b7ebeeece2a2b5b7f3e8a2b5b7e5e8e8eca2b5b7e6e9a2b5b7eee9eef3eee6eba2b5b7e6f7f7e8eee9f3eae2e9f3a9a2b7c6a2b7c6c9e6eae2a2b4c6a2b5b7a2b7c6c6f1e6eeebe6e5eeebeef3fea2b4c6a2b5b7a2b7c6d0efe6f3a2b5b7cea2b5b0eaa2b5b7f4e2e2eceee9e0a2b5b7efe2ebf7a2b5b7f0eef3efa2b4c6a2b5b7" class="btn-outline">✉️ Email to Book</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header">
+    <div>
+      <div class="section-label">Services</div>
+      <h2 class="section-title">What Lisa Offers</h2>
+    </div>
+    <p class="services-intro">Lisa provides thorough psychiatric evaluations and personalized medication management — entirely via telehealth, from the comfort of your home.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+      <div class="service-name">Initial Evaluation</div>
+      <p class="service-desc">A comprehensive assessment of your mental health history, symptoms, medical background, and previous treatments to form a clear clinical picture.</p>
+    </div>
+    <div class="service-card">
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+      <div class="service-name">Medication Management</div>
+      <p class="service-desc">Discussion of medication options, ongoing monitoring, dosage adjustments, and education about what to expect throughout your treatment journey.</p>
+    </div>
+    <div class="service-card">
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+      <div class="service-name">Symptom Assessment</div>
+      <p class="service-desc">Detailed review of symptom severity, duration, and patterns to determine the appropriate level of care and best-fit treatment approach.</p>
+    </div>
+    <div class="service-card">
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+      <div class="service-name">Collaborative Planning</div>
+      <p class="service-desc">You and Lisa work together to create a personalized treatment plan — which may include medication, lifestyle changes, and coordinated therapy referrals.</p>
+    </div>
+    <div class="service-card">
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+      <div class="service-name">Telehealth Visits</div>
+      <p class="service-desc">All appointments are conducted via secure video — convenient, private, and accessible from anywhere in Massachusetts and Rhode Island.</p>
+    </div>
+    <div class="service-card">
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+      <div class="service-name">Patient Education</div>
+      <p class="service-desc">Lisa ensures you understand your diagnosis, how medications work, what side effects to watch for, and when follow-up is needed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="section-label">How It Works</div>
+  <h2 class="section-title">Your Telehealth Journey</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-title">Book Online</div>
+      <p class="step-desc"><strong style="color:var(--sage-light)">Initial appointment:</strong> Text or email Lisa's office directly to get started. <strong style="color:var(--sage-light)">Follow-ups:</strong> Booked through Tebra after your first visit.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-title">Initial Evaluation</div>
+      <p class="step-desc">A thorough review of your symptoms, history, and goals via a secure video appointment.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-title">Treatment Plan</div>
+      <p class="step-desc">Collaboratively develop a personalized plan — medication, referrals, or lifestyle guidance.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-title">Ongoing Support</div>
+      <p class="step-desc">Regular follow-up appointments to monitor progress and adjust your plan as you grow.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- INSURANCE -->
+<section class="insurance-sec" id="insurance">
+  <div class="sec-label">Insurance Accepted</div>
+  <h2>Insurance & Payment</h2>
+  <p style="font-size:0.95rem;color:var(--mid);max-width:60ch;margin-bottom:2.5rem;line-height:1.8;">Lisa accepts most major insurance plans. Please call or email the office to verify your specific coverage before booking. We confirm eligibility and collect co-pays at the time of your visit.</p>
+  <div class="insurance-grid">
+    <div class="ins-card"><div class="ins-logo">A</div><span>Aetna</span></div>
+    <div class="ins-card"><div class="ins-logo">A</div><span>Anthem</span></div>
+    <div class="ins-card"><div class="ins-logo">BC</div><span>Blue Cross Blue Shield</span></div>
+    <div class="ins-card"><div class="ins-logo">BC</div><span>BCBS of Massachusetts</span></div>
+    <div class="ins-card"><div class="ins-logo">BC</div><span>BCBS of Rhode Island</span></div>
+    <div class="ins-card"><div class="ins-logo">C</div><span>Cigna &amp; Evernorth</span></div>
+    <div class="ins-card"><div class="ins-logo">HP</div><span>Harvard Pilgrim</span></div>
+    <div class="ins-card"><div class="ins-logo">MG</div><span>Mass General Brigham Health Plan</span></div>
+    <div class="ins-card"><div class="ins-logo">Op</div><span>Optum</span></div>
+    <div class="ins-card"><div class="ins-logo">Os</div><span>Oscar Health</span></div>
+    <div class="ins-card"><div class="ins-logo">T</div><span>Tufts Health Plan</span></div>
+    <div class="ins-card"><div class="ins-logo">UHC</div><span>UnitedHealthcare / UHC</span></div>
+  </div>
+  <div class="ins-note">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+    Also accepts cash, check, credit cards (Visa, Mastercard, Amex), HSA, and Venmo. A superbill can be provided for out-of-network reimbursement.
+  </div>
+</section>
+
+<!-- CONDITIONS -->
+<section class="conditions" id="conditions">
+  <div class="section-label">Conditions Treated</div>
+  <h2 class="section-title">Areas of Focus</h2>
+  <p style="font-size:0.95rem;color:var(--mid);max-width:60ch;margin-top:0.5rem;">Lisa offers medication consultation and management across a range of psychiatric conditions for both adolescents and adults.</p>
+  <div class="conditions-grid">
+    <span class="condition-tag">ADHD</span>
+    <span class="condition-tag">Depression</span>
+    <span class="condition-tag">Anxiety</span>
+    <span class="condition-tag">Mood Disorders</span>
+    <span class="condition-tag">PTSD</span>
+    <span class="condition-tag">OCD</span>
+    <span class="condition-tag">Eating Disorders</span>
+    <span class="condition-tag">Insomnia</span>
+    <span class="condition-tag">Bipolar Disorder</span>
+    <span class="condition-tag">Trauma</span>
+    <span class="condition-tag">Adolescent Mental Health</span>
+    <span class="condition-tag">Adult Psychiatry</span>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="sec-label">Patient Reviews</div>
+  <h2>What Patients Are Saying</h2>
+  <div class="reviews-summary">
+    <div class="rating-big">
+      <div class="rating-score">4.5</div>
+      <div class="rating-stars">★★★★½</div>
+      <div class="rating-count">Based on 23 reviews</div>
+      <div class="rating-source">via <a href="https://www.healthgrades.com/providers/lisa-anderson-tudkjfr797" target="_blank">Healthgrades</a></div>
+    </div>
+    <div class="rating-bars">
+      <div class="bar-row"><span class="bar-label">5 stars</span><div class="bar-track"><div class="bar-fill" style="width:87%"></div></div><span class="bar-pct">87%</span></div>
+      <div class="bar-row"><span class="bar-label">4 stars</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span class="bar-pct">0%</span></div>
+      <div class="bar-row"><span class="bar-label">3 stars</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span class="bar-pct">0%</span></div>
+      <div class="bar-row"><span class="bar-label">2 stars</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span class="bar-pct">0%</span></div>
+      <div class="bar-row"><span class="bar-label">1 star</span><div class="bar-track"><div class="bar-fill" style="width:13%"></div></div><span class="bar-pct">13%</span></div>
+    </div>
+    <div class="highlights-list">
+      <div class="highlight-chip">✓ Explains Conditions Well</div>
+      <div class="highlight-chip">✓ Low Wait Times</div>
+      <div class="highlight-chip">✓ Friendly Staff</div>
+      <div class="highlight-chip">✓ Easy Scheduling</div>
+      <div class="highlight-chip">✓ Telehealth Available</div>
+    </div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card featured">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"I began seeing Lisa a few years ago for psychiatric care and, with her help, eventually reached a point where I no longer needed medication. Recently, during a particularly challenging time, I chose to return to her care because of the incredibly positive experience I had before. Lisa is not only highly professional and effective in her approach, but she is also deeply caring and empathetic. She creates a safe, judgment-free space where I truly feel heard and understood. Every question I've had has been answered thoroughly and thoughtfully, and she takes the time to ensure I'm comfortable with every step of my care. Her compassion and guidance have made a difficult period in my life much more manageable. I'm extremely grateful for the support she's provided and would recommend her to anyone seeking psychiatric care."</p>
+      <div class="review-meta">
+        <span class="review-author">Verified Patient</span>
+        <span class="review-date">August 2025</span>
+        <a href="https://www.healthgrades.com/providers/lisa-anderson-tudkjfr797" target="_blank" class="review-source">Healthgrades ↗</a>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Lisa creates a safe, judgment-free space where I truly feel heard and understood. She answers every question thoroughly and thoughtfully, and takes the time to ensure I'm comfortable with every step of my care."</p>
+      <div class="review-meta">
+        <span class="review-author">Verified Patient</span>
+        <span class="review-date">2025</span>
+        <a href="https://www.healthgrades.com/providers/lisa-anderson-tudkjfr797" target="_blank" class="review-source">Healthgrades ↗</a>
+      </div>
+    </div>
+    <div class="review-cta">
+      <div class="review-cta-inner">
+        <div style="font-size:2rem;margin-bottom:0.5rem;">💬</div>
+        <div class="review-cta-title">Read All 23 Reviews</div>
+        <p class="review-cta-sub">See what patients are saying about Lisa on Healthgrades — or leave your own review.</p>
+        <a href="https://www.healthgrades.com/providers/lisa-anderson-tudkjfr797" target="_blank" class="btn-primary" style="display:inline-block;margin-top:1rem;font-size:0.82rem;">View on Healthgrades ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFILES -->
+<section class="profiles" id="profiles">
+  <div class="section-label">Verified Profiles</div>
+  <h2 class="section-title">Find Lisa Across Platforms</h2>
+  <p style="font-size:0.95rem;color:var(--mid);max-width:55ch;margin-top:0.5rem;">View patient reviews, ratings, and complete profile information on these trusted healthcare platforms.</p>
+  <div class="profiles-grid">
+    <a href="https://www.psychologytoday.com/us/psychiatrists/lisa-m-anderson-swansea-ma/701895" target="_blank" class="profile-card">
+      <div class="profile-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+      </div>
+      <div>
+        <div class="profile-source">Psychology Today</div>
+        <div class="profile-name">Lisa M. Anderson, Swansea MA</div>
+        <p class="profile-desc">Full therapist profile on Psychology Today, including specialties, approach, and contact info.</p>
+      </div>
+      <svg class="profile-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <a href="https://www.swanseapsychotherapy.com/medication" target="_blank" class="profile-card">
+      <div class="profile-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div>
+        <div class="profile-source">Swansea Center for Psychotherapy</div>
+        <div class="profile-name">Medication Evaluation Page</div>
+        <p class="profile-desc">Learn more about medication management services offered at Swansea Center for Psychotherapy.</p>
+      </div>
+      <svg class="profile-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <a href="https://www.tebra.com/care/provider/lisa-anderson-pmhnp-1558822296" target="_blank" class="profile-card">
+      <div class="profile-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <div>
+        <div class="profile-source">Tebra (Kareo)</div>
+        <div class="profile-name">Book with Lisa Anderson, PMHNP</div>
+        <p class="profile-desc">Schedule an appointment directly through Tebra — the easiest way to book your visit.</p>
+      </div>
+      <svg class="profile-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <a href="https://www.healthgrades.com/providers/lisa-anderson-tudkjfr797" target="_blank" class="profile-card">
+      <div class="profile-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      </div>
+      <div>
+        <div class="profile-source">Healthgrades</div>
+        <div class="profile-name">Lisa Anderson, PMHNP</div>
+        <p class="profile-desc">Verified ratings and patient reviews. Note: other providers may appear on this platform.</p>
+      </div>
+      <svg class="profile-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-info">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Ready to Take the First Step?</h2>
+    <p>Lisa is currently accepting new patients for telehealth medication evaluations and management across Massachusetts and Rhode Island. To book your <strong>initial appointment</strong>, please call, text, or email directly — new patients are not booked through Tebra.</p>
+    <div class="contact-details">
+      <div class="contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+        <a href="tel:774-260-6861" style="color:var(--charcoal);text-decoration:none;font-size:1.05rem;">774-260-6861</a>
+      </div>
+      <div class="contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>25 Market St. Ste. 14, Swansea, MA 02777</span>
+      </div>
+      <div class="contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <span>Telehealth · Massachusetts &amp; Rhode Island</span>
+      </div>
+    </div>
+  </div>
+  <div class="contact-card">
+    <div class="contact-card-title">Book Your First Appointment</div>
+    <div class="contact-card-sub">📌 <strong>First appointment?</strong> Text or email Lisa directly to book. Follow-up appointments are scheduled through Tebra after your initial visit.</div>
+    <div style="background:var(--sage-pale);border-left:3px solid var(--sage);padding:1rem 1.1rem;margin-top:1rem;margin-bottom:1.25rem;border-radius:3px;font-size:0.92rem;line-height:1.55;color:var(--charcoal);">
+      <div style="font-weight:500;margin-bottom:0.4rem;color:var(--sage);font-family:'Cormorant Garamond',serif;font-size:1.05rem;letter-spacing:0.02em;">Suggested message template</div>
+      <div style="font-style:italic;color:var(--mid);">"Hi Lisa, my name is <strong style="color:var(--charcoal);font-style:normal;">[your name]</strong>. My insurance is <strong style="color:var(--charcoal);font-style:normal;">[insurance carrier]</strong>. I'm looking for help with <strong style="color:var(--charcoal);font-style:normal;">[reason — e.g., anxiety, ADHD, medication management]</strong>."</div>
+      <div style="font-size:0.82rem;color:var(--light-text);margin-top:0.5rem;">Same template works for text or email.</div>
+    </div>
+    <div class="quick-links">
+      <a href="tel:774-260-6861" class="quick-link">
+        <span>📞 &nbsp;Call 774-260-6861</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="sms:7742606861&body=Hi%20Lisa%2C%20my%20name%20is%20%5Byour%20name%5D.%20My%20insurance%20is%20%5Binsurance%20carrier%5D.%20I%27m%20looking%20for%20help%20with%20%5Breason%20%E2%80%94%20e.g.%2C%20anxiety%2C%20ADHD%2C%20medication%20management%5D." class="quick-link">
+        <span>💬 &nbsp;Text 774-260-6861 to Book</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/cdn-cgi/l/email-protection#1559747b7170672726242c2225557278747c793b767a782a6660777f707661285c7b7c617c74793027255465657a7c7b6178707b613027254770646070666133777a716c285d7c302725597c66743027563025543025545c30272271302725797c7e70302725617a302725777a7a7e302725747b3027257c7b7c617c74793027257465657a7c7b6178707b613b3025543025545b7478703026543027253025545463747c7974777c797c616c302654302725302554427d74613027255c302722783027256670707e7c7b723027257d707965302725627c617d302654302725" class="quick-link">
+        <span>✉️ &nbsp;Email Lander231970&#64;gmail.com</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://www.tebra.com/care/provider/lisa-anderson-pmhnp-1558822296" target="_blank" class="quick-link" style="border-left:3px solid var(--sage);background:var(--sage-pale);">
+        <span>📅 &nbsp;Book Fol
